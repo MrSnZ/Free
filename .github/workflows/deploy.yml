@@ -1,0 +1,25 @@
+name: Node.js Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Unzip File
+        run: unzip Fr.zip
+
+      - name: Masuk ke Folder
+        run: cd Fr
+
+      - name: Instalasi Dependensi
+        run: npm install
+
+      - name: Jalankan Aplikasi
+        run: npm start
